@@ -26,7 +26,7 @@
 *   **Deployment:** GitHub Pages / GitHub Actions
 
 ## 📦 Getting Started
-1. **Clone the repo:** `git clone https://github.com/TheStrongestOfTomorrow/Text-game.git`
+1. **Clone the repo:** `git clone https://github.com/YourUsername/Text-game.git`
 2. **Run locally:** Open `index.html` in a live server environment (recommended for ES Module support).
 3. **Push to deploy:** Simply push your changes to the `main` branch to trigger the auto-deployment workflow.
 
