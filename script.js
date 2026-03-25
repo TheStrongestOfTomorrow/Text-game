@@ -7,12 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ageEl = document.getElementById('age-tag');
     const historyEl = document.getElementById('history');
 
-    if (!storyEl || !choicesEl) {
-        console.error('DOM elements missing!');
-        return;
-    }
-
-    let state = { boldness: 0, patience: 0 };
+    let state = { boldness: 0, patience: 0, married: false };
     let history = [];
 
     function renderNode(nodeId) {
@@ -26,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         storyEl.innerText = node.text;
         ageEl.innerText = `Age: ${node.age}`;
         choicesEl.innerHTML = '';
-        statsEl.innerText = `Boldness: ${state.boldness} | Patience: ${state.patience}`;
+        statsEl.innerText = `Boldness: ${state.boldness} | Patience: ${state.patience} | Married: ${state.married ? 'Yes' : 'No'}`;
 
         if (!node.options || node.options.length === 0) {
             const btn = document.createElement('button');
@@ -43,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     history.push(opt.text);
                     historyEl.innerHTML = history.map(h => `<div class=\"text-zinc-500\">> ${h}</div>`).join('');
                     if(opt.stat) state[opt.stat]++;
+                    if(opt.text.toLowerCase().includes('marriage')) state.married = true;
                     renderNode(opt.next);
                 };
                 choicesEl.appendChild(btn);
