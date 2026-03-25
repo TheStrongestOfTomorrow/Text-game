@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <title>DESTINY: The Simulation</title>
+    <script src=\"https://cdn.tailwindcss.com\"></script>
+    <link rel=\"stylesheet\" href=\"style.css\">
+</head>
+<body>
+    <div id=\"game\" class=\"glass space-y-8\">
+        <div class=\"flex justify-between items-center border-b border-white/10 pb-6\">
+            <h1 class=\"text-zinc-500 text-xs font-bold uppercase tracking-[0.3em]\">Life Simulation</h1>
+            <div id=\"age-tag\" class=\"bg-indigo-600/20 text-indigo-400 px-4 py-1 rounded-full text-xs font-bold border border-indigo-500/30\">Age: 0</div>
+        </div>
+        <div id=\"story\" class=\"text-2xl font-light leading-relaxed text-zinc-200 min-h-[140px] animate-fade\"></div>
+        <div id=\"history\" class=\"text-xs text-zinc-600 italic border-l-2 border-zinc-800 pl-4 space-y-1\"></div>
+        <div id=\"choices\" class=\"grid gap-3\"></div>
+        <div id=\"stats\" class=\"flex gap-6 pt-6 border-t border-white/10 text-[10px] text-zinc-500 uppercase tracking-[0.2em]\"></div>
+    </div>
+    <script type=\"module\" src=\"script.js\"></script>
+</body>
+</html>
